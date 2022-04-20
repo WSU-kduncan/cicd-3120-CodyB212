@@ -19,6 +19,6 @@ How to View the Project - To view the website being hosted. You will need to ope
 
 Part 2: GitHub Actions and DockerHub
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Creating DockerHub Public Repo - Created by going to hub.docker.com. I pressed create -> Named my repo codyprojecy -> Desription: Project 5 -> Create.
+Creating DockerHub Public Repo - Created by going to hub.docker.com. I pressed create -> Named my repo codyproject -> Desription: Project 5 -> Create.
 
 How to Authenticate - I had to go to my account settings and create a new access token. This allowed me to give read, write, and delete permissions with this token. I ended up saving this token onto my Windows system. Then had to go into my wsl2 docker login -u cody212 and then paste the token into the password credentials. This then allows me to build my image and then docker push cody212/codyproject to my public repo! If I wanted I could also docker pull cody212/codyproject if needed.
