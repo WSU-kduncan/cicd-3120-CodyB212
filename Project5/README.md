@@ -4,6 +4,8 @@ This project will encapsulate filesystem packages that will be able to deliver a
 distribution. The purpose of this project is to have a small image that is able to be implemented across multiple systems, without taking
 up a significant amount of disk space; in purpose to host a simple webpage!
 
+Part 1 - Dockerize it
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Run Project Locally:
 
 Docker Installation - Downloaded Docker for Windows OS from https://docs.docker.com/desktop/windows/install/. Unfortuantely, to be able to configure docker with wsl, I had update and convert wsl to wsl2. I got the wsl2 kernal update from https://docs.microsoft.com/en-us/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package. Which I then had to run this command in the ubuntu terminal wsl --set-version Ubuntu 2. That command converted wsl to wsl 2. For future reference I used the command
@@ -14,4 +16,7 @@ How to Build the Container - I had to docker pull httpd, which is an image that 
 How to Run the Container - To run the container, use the command: docker run -d -p 8080:80 project5. This command will detach and run in the background, while opening and listening to port 8080 on the host system and port 80 for the container.
 
 How to View the Project - To view the website being hosted. You will need to open a browser and type in localhost:8080 to be able to view the webpage.
+
+Part 2: GitHub Actions and DockerHub
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
