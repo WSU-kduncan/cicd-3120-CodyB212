@@ -26,4 +26,4 @@ How to Authenticate - I had to go to my account settings and create a new access
 Configuring GitHub Secrets - These secrets come into play when configuring your workflow actions. To create them you will need to go to your github repo ->
 Settings -> Actions -> New Repo Secret. This page will prompt you to make a secret! I made two secrets, one being DOCKER_USERNAME with the value of my username and a second secret being my DOCKER_TOKEN with the value of your Dockerhub token.
 
-Behavior of GitHub Workflow - The workflow is designed to use your Github Repo and use actions to autonomously build and push your container image to DockerHub when triggered. This workflow is triggered once you push the file to your repo.
+Behavior of GitHub Workflow - The workflow is designed to use your Github Repo and use actions to autonomously build and push your container image to DockerHub when triggered. This workflow is triggered once you make a push to the repo.
