@@ -22,3 +22,8 @@ Part 2: GitHub Actions and DockerHub
 Creating DockerHub Public Repo - Created by going to hub.docker.com. I pressed create -> Named my repo codyproject -> Desription: Project 5 -> Create.
 
 How to Authenticate - I had to go to my account settings and create a new access token. This allowed me to give read, write, and delete permissions with this token. I ended up saving this token onto my Windows system. Then had to go into my wsl2 docker login -u cody212 and then paste the token into the password credentials. This then allows me to build my image and then docker push cody212/codyproject to my public repo! If I wanted I could also docker pull cody212/codyproject if needed.
+
+Configuring GitHub Secrets - These secrets come into play when configuring your workflow actions. To create them you will need to go to your github repo ->
+Settings -> Actions -> New Repo Secret. This page will prompt you to make a secret! I made two secrets, one being DOCKER_USERNAME with the value of my username and a second secret being my DOCKER_TOKEN with the value of your Dockerhub token.
+
+Behavior of GitHub Workflow - The workflow is designed to use your Github Repo and use actions to autonomously build and push your container image to DockerHub when triggered. This workflow is triggered once you push the file to your repo.
