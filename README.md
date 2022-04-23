@@ -30,7 +30,7 @@ Behavior of GitHub Workflow - The workflow is designed to use your Github Repo a
 
 Part 3: Deployment
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Container Restart Script - This script is configured to restart, meaning that everytime there is a new system running these this container image or just frequently pulled, it will stop my old image from running, clear any non-active containers, pull my script, then correctly bind run my container in the background detached.
+Container Restart Script - This script is configured to restart, meaning that everytime there is a new system running this container image or the image is just frequently pulled, it will stop my old image from running, clear any non-active containers, pull my script, then correctly bind run my container in the background detached.
 
 Webhook Task Definition File - This file is designed to reiterate webhook, meaning this file will with execute relative to my webhook.
 
