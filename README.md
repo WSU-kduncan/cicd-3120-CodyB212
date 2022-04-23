@@ -27,3 +27,11 @@ Configuring GitHub Secrets - These secrets come into play when configuring your 
 Settings -> Actions -> New Repo Secret. This page will prompt you to make a secret! I made two secrets, one being DOCKER_USERNAME with the value of my username and a second secret being my DOCKER_TOKEN with the value of your Dockerhub token.
 
 Behavior of GitHub Workflow - The workflow is designed to use your Github Repo and use actions to autonomously build and push your container image to DockerHub when triggered. This workflow is triggered once you make a push to the repo.
+
+Part 3: Deployment
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Container Restart Script - This script is configured to restart, meaning that everytime there is a new system running these this container image or just frequently pulled, it will stop my old image from running, clear any non-active containers, pull my script, then correctly bind run my container in the background detached.
+
+Webhook Task Definition File - This file is designed to reiterate webhook, meaning this file will with execute relative to my webhook.
+
+Setting Up a Webhook on the server - On Dockerhub, I created a webhook that will listen on port 9000 http://18.205.222.246:9000/hooks/redeploy. I installed Go, had to end up creating the webhook.service file, thankfully I didn't have to unmask the file. I then ran sudo systemctl enable wehook.service, which gave me no problems. When I end up commiting and pushing to my github, github updates, along with my DockerHub. Finally, 18.205.222.246:9000/hooks/redeploy displays my website content.
